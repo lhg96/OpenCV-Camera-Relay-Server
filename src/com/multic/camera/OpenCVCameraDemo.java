@@ -1,4 +1,4 @@
-package com.multic.app;
+package com.multic.camera;
 
 import java.awt.Dimension;
 import java.awt.EventQueue;
@@ -29,7 +29,7 @@ import org.opencv.videoio.VideoCapture;
  * @author hyun
  *
  */
-public class Camera extends JFrame{
+public class OpenCVCameraDemo extends JFrame{
 	
 	private JLabel cameraScreen;
 	private JButton btnCapture;
@@ -39,7 +39,7 @@ public class Camera extends JFrame{
 	
 	private boolean clicked = false;
 	
-	public Camera() {
+	public OpenCVCameraDemo() {
 		setLayout(null);
 		
 		cameraScreen = new JLabel();
@@ -123,7 +123,7 @@ public class Camera extends JFrame{
 			
 			@Override
 			public void run() {
-				Camera camera = new Camera();
+				OpenCVCameraDemo camera = new OpenCVCameraDemo();
 				new Thread(new Runnable() {
 					public void run() {
 						camera.startCamera();
